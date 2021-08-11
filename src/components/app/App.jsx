@@ -6,7 +6,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import Detail from '../../containers/Detail.jsx';
-import RickAndMortyCast from '../../containers/Detail.jsx';
+import RickAndMortyCast from '../../containers/RickAndMortyCast';
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
               component={RickAndMortyCast} 
             />
 
-            <Route path="/:id" exact={true}
+            <Route path="/character/:id" exact={true}
               component={Detail} 
             />
 

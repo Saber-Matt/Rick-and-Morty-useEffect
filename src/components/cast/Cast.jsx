@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Cast = ({ name, image }) => {
+const Cast = ({ name, image, }) => {
   return (
     <>
       <h2>{name}</h2>

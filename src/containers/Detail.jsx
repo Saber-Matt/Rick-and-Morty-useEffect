@@ -21,8 +21,8 @@ const Detail = () => {
     species={cast.species}
     type={cast.type}
     gender={cast.gender}
-    origin={cast.origin.name}
-    location={cast.location.name}
+    origin={cast.origin ? cast.origin.name : ''}
+    location={cast.location ? cast.location.name : ''}
     image={cast.image}/>;
 };
 

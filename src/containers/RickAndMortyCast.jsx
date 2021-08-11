@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import CastList from '../components/cast/CastList.jsx';
-import { fetchCast } from '../services/rickAndMortyApi';
+import { fetchCastMembers } from '../services/Api';
 
 const RickAndMortyCast = () => {
+  console.log('hello');
+
   const [loading, setLoading] = useState(true);
   const [cast, setCast] = useState([]);
 
   useEffect(async () => {
-    const cast = await fetchCast();
+    const cast = await fetchCastMembers();
     setCast(cast);
     setLoading(false);
   }, []);

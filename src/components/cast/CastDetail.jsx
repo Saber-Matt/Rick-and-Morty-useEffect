@@ -15,7 +15,7 @@ const CastDetail = ({ name, status, species, type, gender, origin, location, ima
       <p>Origin: {origin}</p>
       <p>Location: {location}</p>
     </figcaption>
-    <Link to="/">Return Home</Link>
+    <Link to="/">Back to the Ship</Link>
   </figure>
 );
 
