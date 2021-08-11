@@ -5,8 +5,8 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
-import DetailPage from '../../containers/DetailPage';
-import RickAndMortyCast from '../../containers/RickAndMortyCast';
+import Detail from '../../containers/Detail.jsx';
+import RickAndMortyCast from '../../containers/Detail.jsx';
 
 export default function App() {
   return (
@@ -16,11 +16,11 @@ export default function App() {
           <Switch>
 
             <Route path="/" exact={true}
-              component={RickAndMortyCharacters} 
+              component={RickAndMortyCast} 
             />
 
             <Route path="/:id" exact={true}
-              component={DetailPage} 
+              component={Detail} 
             />
 
             <Redirect to="/" />
