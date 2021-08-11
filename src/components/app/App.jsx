@@ -1,14 +1,33 @@
-/* eslint-disable max-len */
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
+import DetailPage from '../../containers/DetailPage';
+import RickAndMortyCast from '../../containers/RickAndMortyCast';
 
 export default function App() {
   return (
-    <>
-      <h1>
-        We are hard at work to bring you the best Rick and Morty Quotes Possible, Please be Patient While Our Site is Under Construction
-      </h1>
-      <img src="https://placekeanu.com/" alt='sorry, our images are under construction as well./>
+    <div>
+      <Router>
+        <main>
+          <Switch>
 
-    </>
+            <Route path="/" exact={true}
+              component={RickAndMortyCharacters} 
+            />
+
+            <Route path="/:id" exact={true}
+              component={DetailPage} 
+            />
+
+            <Redirect to="/" />
+            
+          </Switch>
+        </main>
+      </Router>
+    </div>
   );
 }
